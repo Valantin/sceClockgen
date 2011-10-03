@@ -1,0 +1,28 @@
+# Define the exports for the prx
+PSP_BEGIN_EXPORTS
+
+# These four lines are mandatory (although you can add other functions like module_stop)
+# syslib is a psynonym for the single mandatory export.
+PSP_EXPORT_START(syslib, 0, 0x8000)
+    PSP_EXPORT_FUNC_HASH(module_start)
+    PSP_EXPORT_FUNC_HASH(module_reboot_before)
+    PSP_EXPORT_VAR_HASH(module_info)
+    PSP_EXPORT_VAR_HASH(module_sdk_version)
+PSP_EXPORT_END
+
+PSP_EXPORT_START(sceClockgen_driver, 0x11, 0x0001)
+    PSP_EXPORT_FUNC_NID(sceClockgen_driver_D37944FB, 0xD37944FB)
+    PSP_EXPORT_FUNC_NID(sceClockgen_driver_C9AF3102, 0xC9AF3102)
+    PSP_EXPORT_FUNC_NID(sceClockgenInit, 0x29160F5D)
+    PSP_EXPORT_FUNC_NID(sceClockgenEnd, 0x36F9B49D)
+    PSP_EXPORT_FUNC_NID(sceClockgen_driver_35A667A6, 0x35A667A6)
+    PSP_EXPORT_FUNC_NID(sceClockgen_driver_4498E7E1, 0x4498E7E1)
+    PSP_EXPORT_FUNC_NID(sceClockgen_driver_18512E9D, 0x18512E9D)
+    PSP_EXPORT_FUNC_NID(sceClockgenAudioClkSetFreq, 0xACC30ECE)
+    PSP_EXPORT_FUNC_NID(sceClockgenAudioClkEnable, 0x90DC89B4)
+    PSP_EXPORT_FUNC_NID(sceClockgenAudioClkDisable, 0x3C3D1A46)
+    PSP_EXPORT_FUNC_NID(sceClockgenLeptonClkEnable, 0x7FF82F6F)
+    PSP_EXPORT_FUNC_NID(sceClockgenLeptonClkDisable, 0xDBE5F283)
+PSP_EXPORT_END
+
+PSP_END_EXPORTS
