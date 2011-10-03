@@ -1,0 +1,14 @@
+	.set noreorder
+
+#include "pspstub.s"
+
+	STUB_START	"sceSysEventForKernel",0x00010011,0x00020005
+	STUB_FUNC	0xF8170FBE,sceKernelDeleteMutex
+	STUB_FUNC	0xB7D098C6,sceKernelCreateMutex
+	STUB_END
+
+	STUB_START	"sceI2c_driver",0x00010011,0x00030005
+	STUB_FUNC	0x8ABA796F,sceI2c_driver_8ABA796F
+	STUB_FUNC	0x9F3CBEA3,sceI2c_driver_9F3CBEA3
+	STUB_FUNC	0xC7DF1502,sceI2c_driver_C7DF1502
+	STUB_END
